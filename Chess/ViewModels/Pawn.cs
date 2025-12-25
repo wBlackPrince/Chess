@@ -27,6 +27,10 @@ public class Pawn: ReactiveObject, IFigure
         this
             .WhenAnyValue(p => p.Y)
             .Subscribe(p => this.RaisePropertyChanged(nameof(Y)));
+        
+        this
+            .WhenAnyValue(p => p.PathToSprite)
+            .Subscribe(p => this.RaisePropertyChanged(nameof(PathToSprite)));
     }
     
     
@@ -74,8 +78,22 @@ public class Pawn: ReactiveObject, IFigure
             this.RaiseAndSetIfChanged(ref _isVisible, value);
         }
     }
+    
+    
+    private Bitmap _pathToSprite;
 
-    public Bitmap PathToSprite { get; set; }
+    public Bitmap PathToSprite
+    {
+        get
+        {
+            return _pathToSprite;
+        }
+        set
+        {
+            _pathToSprite = value;
+            this.RaiseAndSetIfChanged(ref _pathToSprite, value);
+        }
+    }
 
     public void PrintCoords()
     {

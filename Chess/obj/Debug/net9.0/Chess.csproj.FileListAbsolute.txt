@@ -78,3 +78,4 @@ D:\avalonia_projects\Chess\Chess\bin\Debug\net9.0\DynamicData.dll
 D:\avalonia_projects\Chess\Chess\bin\Debug\net9.0\ReactiveUI.dll
 D:\avalonia_projects\Chess\Chess\bin\Debug\net9.0\Splat.dll
 D:\avalonia_projects\Chess\Chess\bin\Debug\net9.0\System.Reactive.dll
+D:\avalonia_projects\Chess\Chess\obj\Debug\net9.0\Chess.sourcelink.json

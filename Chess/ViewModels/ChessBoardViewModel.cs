@@ -2,6 +2,8 @@ using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Avalonia.Media;
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 using ReactiveUI;
 
 namespace Chess.ViewModels;
@@ -56,14 +58,13 @@ public partial class ChessBoardViewModel: ReactiveObject
         
         Console.WriteLine($"Move called: OldX={OldX}, OldY={OldY}, NewX={NewX}, NewY={NewY}");
         Console.WriteLine($"Calculated old coordinates: X={oldXCoord}, Y={oldYCoord}");
-        
-        foreach (Pawn p in Figures)
+
+        for (int i = 0; i < Figures.Count; i++)
         {
-            if (oldXCoord == p.X && oldYCoord == p.Y)
+            if (Figures[i].X == oldXCoord && Figures[i].Y == oldYCoord)
             {
                 Console.WriteLine($"Pawn matched! Moving to X={NewX * TileSize + TileSize / 4}, Y={NewY * TileSize + TileSize / 4}");
-                p.X = NewX * TileSize + TileSize / 4;
-                p.Y = NewY * TileSize + TileSize / 4;
+                Figures[i] = new Pawn(NewX * TileSize + TileSize / 4, NewY * TileSize + TileSize / 4);
             }
         }
     }
