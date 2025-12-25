@@ -1,0 +1,94 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:Chess.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Chess.Views.ChessBoardView"
+             x:DataType="viewModels:ChessBoardViewModel"
+             Background="Chocolate">
+    
+    <Design.DataContext>
+        <viewModels:ChessBoardViewModel></viewModels:ChessBoardViewModel>
+    </Design.DataContext>
+    
+    <StackPanel>
+    
+        <Grid ColumnDefinitions="Auto" RowDefinitions="Auto">
+            <!-- Плитки -->
+            <ItemsControl Grid.Row="0" Grid.Column="0" ItemsSource="{Binding Tiles}" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas Width="560" Height="560" Background="Coral" Margin="20"></Canvas>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="viewModels:Tile">
+                    
+                        <Grid>
+                            <Rectangle 
+                                Fill="{Binding Color}" 
+                                Height="{Binding Size}" 
+                                Width="{Binding Size}">
+                            </Rectangle>
+                        </Grid>
+                    
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            
+                <ItemsControl.Styles>
+                    <Style Selector="ContentPresenter" x:DataType="viewModels:Tile">
+                        <Setter Property="Canvas.Left" Value="{Binding X}"/>
+                        <Setter Property="Canvas.Top" Value="{Binding Y}"/>
+                    </Style>
+                </ItemsControl.Styles>
+            </ItemsControl>
+            
+            <!-- Фигуры -->
+            <ItemsControl Grid.Row="0" Grid.Column="0" ItemsSource="{Binding Figures}" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas Width="560" Height="560" Background="Transparent"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="viewModels:IFigure">
+                            <Image
+                                Source="{Binding PathToSprite}"
+                                Width="30"   
+                                Height="30"
+                                IsVisible="{Binding IsVisible}">
+                            </Image>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                
+                <ItemsControl.Styles>
+                    <Style Selector="ContentPresenter" x:DataType="viewModels:IFigure">
+                        <Setter Property="Canvas.Left" Value="{Binding X}"/>
+                        <Setter Property="Canvas.Top" Value="{Binding Y}"/>
+                    </Style>
+                </ItemsControl.Styles>
+
+            </ItemsControl>
+        </Grid>
+        
+        <Grid ColumnDefinitions="auto, auto" RowDefinitions="auto, auto, auto, auto" Margin="20">  
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="X сдвигаемой фигуры"></TextBlock>  
+            <NumericUpDown Grid.Row="0" Grid.Column="1" Value="{Binding OldX}"></NumericUpDown>  
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Y сдвигаемой фигуры"></TextBlock>  
+            <NumericUpDown Grid.Row="1" Grid.Column="1" Value="{Binding OldY}"></NumericUpDown>  
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Новый X"></TextBlock>  
+            <NumericUpDown Grid.Row="2" Grid.Column="1" Value="{Binding NewX}"></NumericUpDown>  
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Новый Y"></TextBlock>  
+            <NumericUpDown Grid.Row="3" Grid.Column="1" Value="{Binding NewY}"></NumericUpDown>  
+        </Grid>
+        
+        <Button   
+            Command="{Binding MoveCommand}"  
+            Width="60"  
+            Height="30"></Button> 
+
+    </StackPanel>
+</UserControl>
