@@ -79,3 +79,8 @@ D:\avalonia_projects\Chess\Chess\bin\Debug\net9.0\ReactiveUI.dll
 D:\avalonia_projects\Chess\Chess\bin\Debug\net9.0\Splat.dll
 D:\avalonia_projects\Chess\Chess\bin\Debug\net9.0\System.Reactive.dll
 D:\avalonia_projects\Chess\Chess\obj\Debug\net9.0\Chess.sourcelink.json
+D:\avalonia_projects\Chess\Chess\bin\Debug\net9.0\Avalonia.Headless.dll
+D:\avalonia_projects\Chess\Chess\bin\Debug\net9.0\Avalonia.Headless.XUnit.dll
+D:\avalonia_projects\Chess\Chess\bin\Debug\net9.0\xunit.abstractions.dll
+D:\avalonia_projects\Chess\Chess\bin\Debug\net9.0\xunit.core.dll
+D:\avalonia_projects\Chess\Chess\bin\Debug\net9.0\xunit.execution.dotnet.dll

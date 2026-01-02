@@ -12,7 +12,7 @@ public partial class ChessBoardViewModel: ReactiveObject
 {
     public static int TileSize = 70;
 
-    public ObservableCollection<Pawn> Figures { get; set; } = [];
+    public ObservableCollection<Figure> Figures { get; set; } = [];
     
     public ObservableCollection<Tile> Tiles { get; set; } = [];
 
@@ -24,12 +24,17 @@ public partial class ChessBoardViewModel: ReactiveObject
         
         Figures.Add(a);
 
-        Pawn b = new Pawn(5, 6, TileSize);
+        Rook b = new Rook(5, 6, TileSize);
         
         Figures.Add(b);
         
+        Horse c = new Horse(3, 4, TileSize);
+        
+        Figures.Add(c);
+        
         a.PrintCoords();
         b.PrintCoords();
+        c.PrintCoords();
         
 
         for (int i = 0; i < 64; i++)
@@ -56,9 +61,20 @@ public partial class ChessBoardViewModel: ReactiveObject
         {
             if (Figures[i].X == OldX && Figures[i].Y == OldY && Figures[i].CheckMove(NewX, NewY))
             {
-                Console.Write($"Pawn matched! Moving to X={NewX}, Y={NewY}    ");
+                Console.Write($"Pawn matched! Moving to X={NewX}, Y={NewY}   ");
                 Console.WriteLine($"Type of chosen figure: {Figures[i].GetType().Name}'");
-                Figures[i] = new Pawn(NewX, NewY, TileSize);
+                if (Figures[i].GetType() == typeof(Pawn))
+                {
+                    Figures[i] = new Pawn(NewX, NewY, TileSize);
+                }
+                else if (Figures[i].GetType() == typeof(Rook))
+                {
+                    Figures[i] = new Rook(NewX, NewY, TileSize);
+                }
+                else if (Figures[i].GetType() == typeof(Horse))
+                {
+                    Figures[i] = new Horse(NewX, NewY, TileSize);
+                }
             }
         }
     }

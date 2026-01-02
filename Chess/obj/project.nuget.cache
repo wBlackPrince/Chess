@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "05Qiy8W9ESA=",
+  "dgSpecHash": "AQHqHTTf+ag=",
   "success": true,
   "projectFilePath": "D:\\avalonia_projects\\Chess\\Chess\\Chess.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,8 @@
     "C:\\Users\\maste\\.nuget\\packages\\avalonia.diagnostics\\11.3.6\\avalonia.diagnostics.11.3.6.nupkg.sha512",
     "C:\\Users\\maste\\.nuget\\packages\\avalonia.fonts.inter\\11.3.6\\avalonia.fonts.inter.11.3.6.nupkg.sha512",
     "C:\\Users\\maste\\.nuget\\packages\\avalonia.freedesktop\\11.3.6\\avalonia.freedesktop.11.3.6.nupkg.sha512",
+    "C:\\Users\\maste\\.nuget\\packages\\avalonia.headless\\11.3.6\\avalonia.headless.11.3.6.nupkg.sha512",
+    "C:\\Users\\maste\\.nuget\\packages\\avalonia.headless.xunit\\11.3.6\\avalonia.headless.xunit.11.3.6.nupkg.sha512",
     "C:\\Users\\maste\\.nuget\\packages\\avalonia.native\\11.3.6\\avalonia.native.11.3.6.nupkg.sha512",
     "C:\\Users\\maste\\.nuget\\packages\\avalonia.reactiveui\\11.3.6\\avalonia.reactiveui.11.3.6.nupkg.sha512",
     "C:\\Users\\maste\\.nuget\\packages\\avalonia.remote.protocol\\11.3.6\\avalonia.remote.protocol.11.3.6.nupkg.sha512",
@@ -39,7 +41,11 @@
     "C:\\Users\\maste\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\maste\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
     "C:\\Users\\maste\\.nuget\\packages\\system.reactive\\6.0.1\\system.reactive.6.0.1.nupkg.sha512",
-    "C:\\Users\\maste\\.nuget\\packages\\tmds.dbus.protocol\\0.21.2\\tmds.dbus.protocol.0.21.2.nupkg.sha512"
+    "C:\\Users\\maste\\.nuget\\packages\\tmds.dbus.protocol\\0.21.2\\tmds.dbus.protocol.0.21.2.nupkg.sha512",
+    "C:\\Users\\maste\\.nuget\\packages\\xunit.abstractions\\2.0.2\\xunit.abstractions.2.0.2.nupkg.sha512",
+    "C:\\Users\\maste\\.nuget\\packages\\xunit.core\\2.4.0\\xunit.core.2.4.0.nupkg.sha512",
+    "C:\\Users\\maste\\.nuget\\packages\\xunit.extensibility.core\\2.4.0\\xunit.extensibility.core.2.4.0.nupkg.sha512",
+    "C:\\Users\\maste\\.nuget\\packages\\xunit.extensibility.execution\\2.4.0\\xunit.extensibility.execution.2.4.0.nupkg.sha512"
   ],
   "logs": []
 }

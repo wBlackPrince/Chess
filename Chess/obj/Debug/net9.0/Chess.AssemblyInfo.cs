@@ -13,10 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a09cd2c5ee42ad279989bdc79a3bfb9f3763b16")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ebc9e72632d57bf690f239014a7cddd52e514f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Chess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Chess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("TestableApp.Headless.XUnit")]
 
 // Создано классом WriteCodeFragment MSBuild.
 

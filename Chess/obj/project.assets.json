@@ -211,6 +211,39 @@
           }
         }
       },
+      "Avalonia.Headless/11.3.6": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.6"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Headless.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Headless.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Headless.XUnit/11.3.6": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia.Headless": "11.3.6",
+          "xunit.core": "2.4.0"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Headless.XUnit.dll": {
+            "related": ".runtimeconfig.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Headless.XUnit.dll": {
+            "related": ".runtimeconfig.json;.xml"
+          }
+        }
+      },
       "Avalonia.Native/11.3.6": {
         "type": "package",
         "dependencies": {
@@ -708,6 +741,64 @@
         "runtime": {
           "lib/net8.0/Tmds.DBus.Protocol.dll": {}
         }
+      },
+      "xunit.abstractions/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/xunit.abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/xunit.abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "xunit.core/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "xunit.extensibility.core": "[2.4.0]",
+          "xunit.extensibility.execution": "[2.4.0]"
+        },
+        "build": {
+          "build/_._": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/_._": {}
+        }
+      },
+      "xunit.extensibility.core/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "xunit.abstractions": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/xunit.core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/xunit.core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "xunit.extensibility.execution/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "xunit.extensibility.core": "[2.4.0]"
+        },
+        "compile": {
+          "lib/netstandard2.0/xunit.execution.dotnet.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/xunit.execution.dotnet.dll": {
+            "related": ".xml"
+          }
+        }
       }
     }
   },
@@ -1022,6 +1113,44 @@
         "lib/net8.0/Avalonia.FreeDesktop.xml",
         "lib/netstandard2.0/Avalonia.FreeDesktop.dll",
         "lib/netstandard2.0/Avalonia.FreeDesktop.xml"
+      ]
+    },
+    "Avalonia.Headless/11.3.6": {
+      "sha512": "vCmLpBZBrYq6WgfO3soi0Tx8Wy3S7+oUpE0tQj5rnTByZiGLm/yXv/VNdRgNAIqF80fuUsMUFTpVASBmG+xS/w==",
+      "type": "package",
+      "path": "avalonia.headless/11.3.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "avalonia.headless.11.3.6.nupkg.sha512",
+        "avalonia.headless.nuspec",
+        "lib/net6.0/Avalonia.Headless.dll",
+        "lib/net6.0/Avalonia.Headless.xml",
+        "lib/net8.0/Avalonia.Headless.dll",
+        "lib/net8.0/Avalonia.Headless.xml",
+        "lib/netstandard2.0/Avalonia.Headless.dll",
+        "lib/netstandard2.0/Avalonia.Headless.xml"
+      ]
+    },
+    "Avalonia.Headless.XUnit/11.3.6": {
+      "sha512": "SBJihKZ53wxK281nqFDn4iLhZu97yOfVEXtVN6N9jo/wYzRz3N4GPm8u4HjyHHnz13ekf9yMAhr4oM6M3ljjXg==",
+      "type": "package",
+      "path": "avalonia.headless.xunit/11.3.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "avalonia.headless.xunit.11.3.6.nupkg.sha512",
+        "avalonia.headless.xunit.nuspec",
+        "lib/net6.0/Avalonia.Headless.XUnit.dll",
+        "lib/net6.0/Avalonia.Headless.XUnit.runtimeconfig.json",
+        "lib/net6.0/Avalonia.Headless.XUnit.xml",
+        "lib/net8.0/Avalonia.Headless.XUnit.dll",
+        "lib/net8.0/Avalonia.Headless.XUnit.runtimeconfig.json",
+        "lib/net8.0/Avalonia.Headless.XUnit.xml",
+        "lib/netstandard2.0/Avalonia.Headless.XUnit.dll",
+        "lib/netstandard2.0/Avalonia.Headless.XUnit.xml"
       ]
     },
     "Avalonia.Native/11.3.6": {
@@ -1800,6 +1929,75 @@
         "tmds.dbus.protocol.0.21.2.nupkg.sha512",
         "tmds.dbus.protocol.nuspec"
       ]
+    },
+    "xunit.abstractions/2.0.2": {
+      "sha512": "vItLB0WkaKg0426RgWq+ZdXH6D+YV/uH28C0weWMOBnVx7I+luHuEYss9hoOngpkiN5kUpLvh9VZRx1H2sk59A==",
+      "type": "package",
+      "path": "xunit.abstractions/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/xunit.abstractions.dll",
+        "lib/net35/xunit.abstractions.xml",
+        "lib/netstandard1.0/xunit.abstractions.dll",
+        "lib/netstandard1.0/xunit.abstractions.xml",
+        "lib/netstandard2.0/xunit.abstractions.dll",
+        "lib/netstandard2.0/xunit.abstractions.xml",
+        "xunit.abstractions.2.0.2.nupkg.sha512",
+        "xunit.abstractions.nuspec"
+      ]
+    },
+    "xunit.core/2.4.0": {
+      "sha512": "BJ/O/tPEcHUCwQYuwqXoYccTMyw6B5dA6yh7WxWWBhKbjqTsG9RWL0nCQXM5yQYJwUuFzBkiXDPN1BO6UdBB4Q==",
+      "type": "package",
+      "path": "xunit.core/2.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/xunit.core.props",
+        "build/xunit.core.targets",
+        "buildMultiTargeting/xunit.core.props",
+        "buildMultiTargeting/xunit.core.targets",
+        "xunit.core.2.4.0.nupkg.sha512",
+        "xunit.core.nuspec"
+      ]
+    },
+    "xunit.extensibility.core/2.4.0": {
+      "sha512": "qr/KrR6uukHXD9e/lLQjyCPfMEDuvvhNFDzsYzCF2kKlYKiqcADfUvA9Q68rBtKFtwHFeghjWEuv15KoGD2SfA==",
+      "type": "package",
+      "path": "xunit.extensibility.core/2.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/xunit.core.dll",
+        "lib/net452/xunit.core.dll.tdnet",
+        "lib/net452/xunit.core.xml",
+        "lib/net452/xunit.runner.tdnet.dll",
+        "lib/net452/xunit.runner.utility.net452.dll",
+        "lib/netstandard1.1/xunit.core.dll",
+        "lib/netstandard1.1/xunit.core.xml",
+        "lib/netstandard2.0/xunit.core.dll",
+        "lib/netstandard2.0/xunit.core.xml",
+        "xunit.extensibility.core.2.4.0.nupkg.sha512",
+        "xunit.extensibility.core.nuspec"
+      ]
+    },
+    "xunit.extensibility.execution/2.4.0": {
+      "sha512": "252Dzn7i5bMPKtAL15aOP3qJhxKd+57I8ldwIQRJa745JxQuiBu5Da0vtIISVTtc3buRSkBwVnD9iUzsEmCzZA==",
+      "type": "package",
+      "path": "xunit.extensibility.execution/2.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/xunit.execution.desktop.dll",
+        "lib/net452/xunit.execution.desktop.xml",
+        "lib/netstandard1.1/xunit.execution.dotnet.dll",
+        "lib/netstandard1.1/xunit.execution.dotnet.xml",
+        "lib/netstandard2.0/xunit.execution.dotnet.dll",
+        "lib/netstandard2.0/xunit.execution.dotnet.xml",
+        "xunit.extensibility.execution.2.4.0.nupkg.sha512",
+        "xunit.extensibility.execution.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -1809,6 +2007,7 @@
       "Avalonia.Desktop >= 11.3.6",
       "Avalonia.Diagnostics >= 11.3.6",
       "Avalonia.Fonts.Inter >= 11.3.6",
+      "Avalonia.Headless.XUnit >= 11.3.6",
       "Avalonia.ReactiveUI >= 11.3.6",
       "Avalonia.Themes.Fluent >= 11.3.6",
       "CommunityToolkit.Mvvm >= 8.2.1"
@@ -1882,6 +2081,10 @@
             "version": "[11.3.6, )"
           },
           "Avalonia.Fonts.Inter": {
+            "target": "Package",
+            "version": "[11.3.6, )"
+          },
+          "Avalonia.Headless.XUnit": {
             "target": "Package",
             "version": "[11.3.6, )"
           },

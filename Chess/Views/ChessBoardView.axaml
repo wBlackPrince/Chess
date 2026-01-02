@@ -54,7 +54,7 @@
                 </ItemsControl.ItemsPanel>
             
                 <ItemsControl.ItemTemplate>
-                    <DataTemplate x:DataType="viewModels:IFigure">
+                    <DataTemplate x:DataType="viewModels:Figure">
                             <Image
                                 Source="{Binding PathToSprite, Mode=TwoWay}"
                                 Width="30"   
@@ -65,7 +65,7 @@
                 </ItemsControl.ItemTemplate>
                 
                 <ItemsControl.Styles>
-                    <Style Selector="ContentPresenter" x:DataType="viewModels:IFigure">
+                    <Style Selector="ContentPresenter" x:DataType="viewModels:Figure">
                         <Setter Property="Canvas.Left" Value="{Binding XCanvasCoordinate, Mode=TwoWay}"/>
                         <Setter Property="Canvas.Top" Value="{Binding YCanvasCoordinate, Mode=TwoWay}"/>
                     </Style>

@@ -13,6 +13,7 @@
           "Avalonia.Desktop": "11.3.6",
           "Avalonia.Diagnostics": "11.3.6",
           "Avalonia.Fonts.Inter": "11.3.6",
+          "Avalonia.Headless.XUnit": "11.3.6",
           "Avalonia.ReactiveUI": "11.3.6",
           "Avalonia.Themes.Fluent": "11.3.6",
           "CommunityToolkit.Mvvm": "8.2.1"
@@ -163,6 +164,29 @@
         },
         "runtime": {
           "lib/net8.0/Avalonia.FreeDesktop.dll": {
+            "assemblyVersion": "11.3.6.0",
+            "fileVersion": "11.3.6.0"
+          }
+        }
+      },
+      "Avalonia.Headless/11.3.6": {
+        "dependencies": {
+          "Avalonia": "11.3.6"
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Headless.dll": {
+            "assemblyVersion": "11.3.6.0",
+            "fileVersion": "11.3.6.0"
+          }
+        }
+      },
+      "Avalonia.Headless.XUnit/11.3.6": {
+        "dependencies": {
+          "Avalonia.Headless": "11.3.6",
+          "xunit.core": "2.4.0"
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Headless.XUnit.dll": {
             "assemblyVersion": "11.3.6.0",
             "fileVersion": "11.3.6.0"
           }
@@ -511,6 +535,42 @@
             "fileVersion": "0.21.2.0"
           }
         }
+      },
+      "xunit.abstractions/2.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/xunit.abstractions.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "xunit.core/2.4.0": {
+        "dependencies": {
+          "xunit.extensibility.core": "2.4.0",
+          "xunit.extensibility.execution": "2.4.0"
+        }
+      },
+      "xunit.extensibility.core/2.4.0": {
+        "dependencies": {
+          "xunit.abstractions": "2.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/xunit.core.dll": {
+            "assemblyVersion": "2.4.0.4049",
+            "fileVersion": "2.4.0.4049"
+          }
+        }
+      },
+      "xunit.extensibility.execution/2.4.0": {
+        "dependencies": {
+          "xunit.extensibility.core": "2.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/xunit.execution.dotnet.dll": {
+            "assemblyVersion": "2.4.0.4049",
+            "fileVersion": "2.4.0.4049"
+          }
+        }
       }
     }
   },
@@ -582,6 +642,20 @@
       "sha512": "sha512-vI+m3r5GRoF0CS1EpMG+gx9qCQVkCwlsHyW6+UWxNNpL2IZ9S3zPt/GNgG6vFrhZpBTsoG+OZnZ9XPRT+KkqUw==",
       "path": "avalonia.freedesktop/11.3.6",
       "hashPath": "avalonia.freedesktop.11.3.6.nupkg.sha512"
+    },
+    "Avalonia.Headless/11.3.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vCmLpBZBrYq6WgfO3soi0Tx8Wy3S7+oUpE0tQj5rnTByZiGLm/yXv/VNdRgNAIqF80fuUsMUFTpVASBmG+xS/w==",
+      "path": "avalonia.headless/11.3.6",
+      "hashPath": "avalonia.headless.11.3.6.nupkg.sha512"
+    },
+    "Avalonia.Headless.XUnit/11.3.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SBJihKZ53wxK281nqFDn4iLhZu97yOfVEXtVN6N9jo/wYzRz3N4GPm8u4HjyHHnz13ekf9yMAhr4oM6M3ljjXg==",
+      "path": "avalonia.headless.xunit/11.3.6",
+      "hashPath": "avalonia.headless.xunit.11.3.6.nupkg.sha512"
     },
     "Avalonia.Native/11.3.6": {
       "type": "package",
@@ -771,6 +845,34 @@
       "sha512": "sha512-ScSMrUrrw8px4kK1Glh0fZv/HQUlg1078bNXNPfRPKQ3WbRzV9HpsydYEOgSoMK5LWICMf2bMwIFH0pGjxjcMA==",
       "path": "tmds.dbus.protocol/0.21.2",
       "hashPath": "tmds.dbus.protocol.0.21.2.nupkg.sha512"
+    },
+    "xunit.abstractions/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vItLB0WkaKg0426RgWq+ZdXH6D+YV/uH28C0weWMOBnVx7I+luHuEYss9hoOngpkiN5kUpLvh9VZRx1H2sk59A==",
+      "path": "xunit.abstractions/2.0.2",
+      "hashPath": "xunit.abstractions.2.0.2.nupkg.sha512"
+    },
+    "xunit.core/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BJ/O/tPEcHUCwQYuwqXoYccTMyw6B5dA6yh7WxWWBhKbjqTsG9RWL0nCQXM5yQYJwUuFzBkiXDPN1BO6UdBB4Q==",
+      "path": "xunit.core/2.4.0",
+      "hashPath": "xunit.core.2.4.0.nupkg.sha512"
+    },
+    "xunit.extensibility.core/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qr/KrR6uukHXD9e/lLQjyCPfMEDuvvhNFDzsYzCF2kKlYKiqcADfUvA9Q68rBtKFtwHFeghjWEuv15KoGD2SfA==",
+      "path": "xunit.extensibility.core/2.4.0",
+      "hashPath": "xunit.extensibility.core.2.4.0.nupkg.sha512"
+    },
+    "xunit.extensibility.execution/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-252Dzn7i5bMPKtAL15aOP3qJhxKd+57I8ldwIQRJa745JxQuiBu5Da0vtIISVTtc3buRSkBwVnD9iUzsEmCzZA==",
+      "path": "xunit.extensibility.execution/2.4.0",
+      "hashPath": "xunit.extensibility.execution.2.4.0.nupkg.sha512"
     }
   }
 }
