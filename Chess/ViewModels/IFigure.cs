@@ -8,9 +8,15 @@ public interface IFigure
     
     public Bitmap PathToSprite { get; set; }
     
+    public int XCanvasCoordinate { get; set; }
+    
+    public int YCanvasCoordinate { get; set; }
+    
     public int X { get; set; }
     
     public int Y { get; set; }
 
     public void PrintCoords();
+
+    public bool CheckMove(int newX, int newY);
 }

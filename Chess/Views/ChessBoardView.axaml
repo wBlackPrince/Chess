@@ -66,8 +66,8 @@
                 
                 <ItemsControl.Styles>
                     <Style Selector="ContentPresenter" x:DataType="viewModels:IFigure">
-                        <Setter Property="Canvas.Left" Value="{Binding X, Mode=TwoWay}"/>
-                        <Setter Property="Canvas.Top" Value="{Binding Y, Mode=TwoWay}"/>
+                        <Setter Property="Canvas.Left" Value="{Binding XCanvasCoordinate, Mode=TwoWay}"/>
+                        <Setter Property="Canvas.Top" Value="{Binding YCanvasCoordinate, Mode=TwoWay}"/>
                     </Style>
                 </ItemsControl.Styles>
 

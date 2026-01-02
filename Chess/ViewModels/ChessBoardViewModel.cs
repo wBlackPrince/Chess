@@ -20,15 +20,11 @@ public partial class ChessBoardViewModel: ReactiveObject
     {
         MoveCommand = ReactiveCommand.Create(Move);
         
-        Pawn a = new Pawn(
-            4 * TileSize + TileSize/4,
-            3 * TileSize + TileSize/4);
+        Pawn a = new Pawn(4, 3, TileSize);
         
         Figures.Add(a);
 
-        Pawn b = new Pawn(
-            5 * TileSize + TileSize/4,
-            6 * TileSize + TileSize/4);
+        Pawn b = new Pawn(5, 6, TileSize);
         
         Figures.Add(b);
         
@@ -53,18 +49,16 @@ public partial class ChessBoardViewModel: ReactiveObject
 
     public void Move()
     {
-        int oldXCoord = OldX * TileSize + TileSize / 4;
-        int oldYCoord = OldY * TileSize + TileSize / 4;
-        
         Console.WriteLine($"Move called: OldX={OldX}, OldY={OldY}, NewX={NewX}, NewY={NewY}");
-        Console.WriteLine($"Calculated old coordinates: X={oldXCoord}, Y={oldYCoord}");
+        Console.WriteLine($"Calculated old coordinates: X={OldX}, Y={OldY}");
 
         for (int i = 0; i < Figures.Count; i++)
         {
-            if (Figures[i].X == oldXCoord && Figures[i].Y == oldYCoord)
+            if (Figures[i].X == OldX && Figures[i].Y == OldY && Figures[i].CheckMove(NewX, NewY))
             {
-                Console.WriteLine($"Pawn matched! Moving to X={NewX * TileSize + TileSize / 4}, Y={NewY * TileSize + TileSize / 4}");
-                Figures[i] = new Pawn(NewX * TileSize + TileSize / 4, NewY * TileSize + TileSize / 4);
+                Console.Write($"Pawn matched! Moving to X={NewX}, Y={NewY}    ");
+                Console.WriteLine($"Type of chosen figure: {Figures[i].GetType().Name}'");
+                Figures[i] = new Pawn(NewX, NewY, TileSize);
             }
         }
     }

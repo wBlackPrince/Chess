@@ -7,10 +7,12 @@ namespace Chess.ViewModels;
 
 public class Pawn: ReactiveObject, IFigure
 {
-    public Pawn(int x, int y)
+    public Pawn(int x, int y, int tileSize)
     {
-        _x = x;
-        _y = y;
+        X = x;
+        Y= y;
+        XCanvasCoordinate = x * tileSize + tileSize / 4;
+        YCanvasCoordinate = y * tileSize + tileSize / 4;
         PathToSprite = new Bitmap(
             AssetLoader.Open(new Uri(
                 "avares://Chess/Assets/images/pawn_white.png"
@@ -31,6 +33,48 @@ public class Pawn: ReactiveObject, IFigure
         this
             .WhenAnyValue(p => p.PathToSprite)
             .Subscribe(p => this.RaisePropertyChanged(nameof(PathToSprite)));
+    }
+
+
+    public bool CheckMove(int newX, int newY)
+    {
+        bool a = (Y - 1) == newY;
+        Console.WriteLine($"a: {a}");
+        bool b = ((X - 1) == newX || (X + 1) == newX || X == newX);
+        Console.WriteLine($"b: {b}");
+
+        return ((Y - 1) == newY && ((X - 1) == newX || (X + 1) == newX || X == newX));
+    }
+    
+    
+    
+    private int _xCanvasCoordinate = 0;
+    public int XCanvasCoordinate
+    {
+        get
+        {
+            return _xCanvasCoordinate;
+        }
+        set
+        {
+            _xCanvasCoordinate = value;
+            this.RaiseAndSetIfChanged(ref _xCanvasCoordinate, value);
+        }
+    }
+    
+    
+    private int _yCanvasCoordinate = 0;
+    public int YCanvasCoordinate
+    {
+        get
+        {
+            return _yCanvasCoordinate;
+        }
+        set
+        {
+            _yCanvasCoordinate = value;
+            this.RaiseAndSetIfChanged(ref _yCanvasCoordinate, value);
+        }
     }
     
     
